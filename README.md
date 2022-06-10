@@ -2,7 +2,7 @@
 
 # Book Store
 
-BookStore is a calculator build using react.js
+BookStore is online book Library build using react.js
 
 <p align="center">
   <img src="https://github.com/microverseinc/curriculum-react-redux/blob/main/bookstore/images/bookstore.png" alt="Calculator" width="300px" />
