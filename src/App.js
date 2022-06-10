@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Linking from './components/Linking';
 import Books from './components/Books';
 import Categories from './components/Categories';
+import './CSS/app.css';
 
 function App() {
   return (
