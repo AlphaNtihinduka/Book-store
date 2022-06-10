@@ -1,0 +1,42 @@
+.book-container {
+  margin: 1rem 3rem;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1rem solid black;
+}
+
+.topic {
+  font-size: 1.3rem;
+  color: #888;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-container {
+  font-size: 1.5rem;
+  color: #639bca;
+  display: flex;
+  list-style: none;
+  cursor: pointer;
+}
+
+.btn-container li {
+  margin-right: 1rem;
+}
+
+.btn-container li:hover {
+  color: #0290ff;
+}
+
+.progress-btn {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #0290ff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
