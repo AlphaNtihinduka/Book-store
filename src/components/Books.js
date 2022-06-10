@@ -1,4 +1,3 @@
-// eslint-disable
 import React from 'react';
 import AddNewBook from './AddNewBook';
 import Book from './Book';
