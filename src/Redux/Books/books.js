@@ -10,7 +10,7 @@ const reducer = ((books = [], action = {}) => {
 
     case actions.BOOK_REMOVED:
       return [
-        books.map((book) => book.id !== action.id),
+        ...books.filter((book) => book.id !== action.id),
       ];
     default:
       return books;
