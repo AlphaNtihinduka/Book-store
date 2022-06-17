@@ -1,7 +1,12 @@
 import * as actions from '../actionsTypes';
+import { fetchApi, addApiData, deleteApiData } from '../../API/apiData';
 
 const reducer = ((books = [], action = {}) => {
   switch (action.type) {
+    case actions.BOOK_GOT:
+      return [
+        action.apiData,
+      ];
     case actions.BOOK_ADDED:
       return [
         ...books,
@@ -18,12 +23,45 @@ const reducer = ((books = [], action = {}) => {
 });
 
 // Action creators
-export const addBook = (book) => ({
-  type: actions.BOOK_ADDED, book,
-});
+export const fetchBook = () => async (dispatch) => {
+  const res = await fetchApi();
+  // eslint-disable-next-line array-callback-return
+  const apiData = Object.keys(res).map((key) => {
+    const book = res[key][0];
+    book.id = key;
+    return book;
+  });
+  dispatch({
+    type: actions.BOOK_GOT,
+    apiData,
+  });
+};
 
-export const RemoveBook = (id) => ({
-  type: actions.BOOK_REMOVED, id,
-});
+export const addBook = (payload) => async (dispatch) => {
+  const book = {
+    ...payload,
+    item_id: payload.id,
+  };
+  await addApiData(book);
+  dispatch({
+    type: actions.BOOK_ADDED,
+    book,
+  });
+};
+
+export const removeBook = (id) => async (dispatch) => {
+  await deleteData(id);
+  dispatch({
+    type: actions.BOOK_REMOVED, id,
+  });
+};
+
+// export const addBook = (book) => ({
+//   type: actions.BOOK_ADDED, book,
+// });
+
+// export const RemoveBook = (id) => ({
+//   type: actions.BOOK_REMOVED, id,
+// });
 
 export default reducer;
