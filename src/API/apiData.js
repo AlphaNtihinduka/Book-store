@@ -8,7 +8,6 @@ const fetchApi = async () => {
     },
   }).catch((error) => error.message);
   const response = await result.json();
-  console.log(response);
   return response;
 };
 

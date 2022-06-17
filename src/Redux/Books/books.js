@@ -1,5 +1,5 @@
 import * as actions from '../actionsTypes';
-import { fetchApi, addApiData, deleteApiData } from '../../API/apiData';
+import fetchApi, { addApiData, deleteApiData } from '../../API/apiData';
 
 const reducer = ((books = [], action = {}) => {
   switch (action.type) {
@@ -49,8 +49,8 @@ export const addBook = (payload) => async (dispatch) => {
   });
 };
 
-export const removeBook = (id) => async (dispatch) => {
-  await deleteData(id);
+export const RemoveBook = (id) => async (dispatch) => {
+  await deleteApiData(id);
   dispatch({
     type: actions.BOOK_REMOVED, id,
   });
