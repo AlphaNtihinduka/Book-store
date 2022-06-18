@@ -2,10 +2,16 @@
   margin: 0 3rem 5rem 3rem;
 }
 
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
 .inputs {
   min-width: 20rem;
   margin-right: 1rem;
   height: 2.5rem;
+  margin-top: 1rem;
 }
 
 .add-btn {
