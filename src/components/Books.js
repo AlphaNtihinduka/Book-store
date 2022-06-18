@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
 import AddNewBook from './AddNewBook';
 import Book from './Book';
 
@@ -12,7 +11,7 @@ const Books = () => {
   return (
     <div>
       {booksStore.map((book) => (
-        <div key={uuidv4()} className="book-details">
+        <div key={book.id} className="book-details">
           <Book category={book.category} id={book.id} title={book.title} author={book.author} />
         </div>
       ))}
