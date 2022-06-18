@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 0.1rem solid black;
+  border: 0.1rem solid #888;
 }
 
 .topic {
@@ -18,19 +18,56 @@
 }
 
 .btn-container {
-  font-size: 1.5rem;
-  color: #639bca;
   display: flex;
   list-style: none;
-  cursor: pointer;
 }
 
-.btn-container li {
+.btn-container li button {
+  font-size: 1.2rem;
   margin-right: 1rem;
+  margin-top: 1rem;
+  color: #639bca;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
 }
 
-.btn-container li:hover {
+.btn-container li button:hover {
   color: #0290ff;
+}
+
+.right-progress {
+  display: flex;
+  justify-content: space-between;
+}
+
+.circular-progress {
+  display: flex;
+  align-items: center;
+}
+
+.percentage {
+  font-size: 2rem;
+}
+
+.complete {
+  color: #888;
+}
+
+.vertical-line {
+  border-right: 1px solid rgb(196, 192, 192);
+  height: 10rem;
+  margin: 0 5rem;
+  display: flex;
+  align-self: center;
+}
+
+.right-update div {
+  margin-top: 1rem;
+}
+
+.chapter {
+  color: #888;
 }
 
 .progress-btn {
