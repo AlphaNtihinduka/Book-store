@@ -11,11 +11,7 @@ const Book = (props) => {
 
   const dispatch = useDispatch();
 
-  // const deleteHandler = () => {
-  //   dispatch(removeBook(id));
-  // };
-
-  const handleClick = (e, bookId) => {
+  const deleteHandler = (e, bookId) => {
     e.preventDefault();
     dispatch(removeBook(bookId));
   };
@@ -31,8 +27,7 @@ const Book = (props) => {
             <button type="button">Comment</button>
           </li>
           <li className="remove-btn">
-            {/* <button type="button" onClick={() => deleteHandler()}>Remove</button> */}
-            <button type="button" onClick={(e) => handleClick(e, id)}>Remove</button>
+            <button type="button" onClick={(e) => deleteHandler(e, id)}>Remove</button>
           </li>
           <li className="edit-btn">
             <button type="button">Edit |</button>
