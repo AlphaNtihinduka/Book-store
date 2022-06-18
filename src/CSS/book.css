@@ -4,12 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 0.1rem solid #888;
+  border: 0.1rem solid #e8e8e8;
+  border-radius: 0.5rem;
 }
 
 .topic {
   font-size: 1.3rem;
-  color: #888;
+  color: #e8e8e8;
 }
 
 .title {
@@ -51,7 +52,7 @@
 }
 
 .complete {
-  color: #888;
+  color: #e8e8e8;
 }
 
 .vertical-line {
@@ -67,7 +68,7 @@
 }
 
 .chapter {
-  color: #888;
+  color: #e8e8e8;
 }
 
 .progress-btn {
